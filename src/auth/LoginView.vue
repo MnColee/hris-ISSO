@@ -65,7 +65,7 @@
                         <i class="fa-solid fa-key text-blue-300 text-lg"></i>
                         <input type="password" class="bg-transparent border-none outline-none text-lg" placeholder="Password">
                     </div>
-                    <button class="py-2 w-full text-white bg-blue-600 rounded text-lg">Login</button>
+                    <RouterLink :to="{ name: 'promptpassword'}" class="py-2 w-full text-white text-center bg-blue-600 rounded text-lg">Login</RouterLink>
                 </form>
             </div>
         </article>

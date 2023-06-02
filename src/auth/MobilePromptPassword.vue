@@ -26,7 +26,7 @@
                     <div class="mobile-login-input w-full flex items-center gap-x-3 py-2.5 px-5">
                         <input type="password" class="bg-transparent border-none outline-none text-lg" placeholder="Re-Enter Password">
                     </div>
-                    <button class="py-2 w-full text-white bg-blue-600 rounded text-lg">Change Password</button>
+                    <RouterLink :to="{ name: 'mhomepage'}" class="py-2 text-center w-full text-white bg-blue-600 rounded text-lg">Change Password</RouterLink>
                 </form>
             </div>
         </article>
