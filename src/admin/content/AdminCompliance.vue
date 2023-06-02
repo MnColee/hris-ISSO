@@ -8,7 +8,7 @@
                 <div class="flex items-center justify-center w-full mb-5">
                     <p class="uppercase text-black font-bold w-full text-center text-2xl lg:text-3xl">Compliance</p>
                 </div>
-                <ComplianceTable/>
+                <ComplianceTable />
             </article>
         </section>
     </main>

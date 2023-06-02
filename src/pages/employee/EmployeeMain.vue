@@ -23,9 +23,9 @@
                                 </thead>
 
                                 <tbody class="w-full">
-                                    <tr v-for="week in weeks" class="w-full grid grid-cols-7">
+                                    <tr v-for="week in weeks" class="w-full">
                                         <td v-for="day in week" :class="{ 'current-day': day.isCurrentDay, 'different-month': !day.isCurrentMonth }"
-                                            class="w-full text-center lg:text-4xl lg:py-6 xl:py-6 xl:text-5xl">
+                                            class="w-40 text-center  lg:text-4xl lg:py-6 xl:w-40 xl:py-6 xl:text-5xl">
                                             {{ day.date }}
                                             <div v-if="day.text" class="day-text">{{ day.text }}</div>
                                         </td>

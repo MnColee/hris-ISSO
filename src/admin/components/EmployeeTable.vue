@@ -1,7 +1,7 @@
 <template>
     <section class="w-full">
 
-        <div class="flex items-end justify-between w-full py-6">
+        <div class="flex flex-col items-end justify-between w-full py-6 gap-y-4 md:flex-row md:gap-x-4 lg:gap-x-10">
             <div class="flex flex-col gap-y-1 w-full">
                 <p class="text-base font-bold hidden">What are you looking for?</p>
                 <div class="searchField w-full px-2 py-1.5 border border-blue-500 rounded-lg flex items-center gap-x-2 bg-blue-50">
@@ -9,16 +9,17 @@
                     <i class="fa-solid fa-magnifying-glass text-blue-500"></i>
                 </div>
             </div>
-            <div class="flex items-center gap-x-3 w-full lg:ml-8">
-                <p class="text-base font-medium">Filter By:</p>
+            <div class="flex flex-col items-start gap-x-3 w-full md:gap-x-1 md:flex-row md:items-center lg:ml-8 lg:items-center">
+                <p class="text-base font-medium md:w-24">Filter By:</p>
                 <select class="w-full p-2 border border-blue-500 rounded-lg flex items-center gap-x-2 text-blue-600 outline-none bg-blue-50 lg:w-9/12">
                     <option value="">All</option>
                 </select>
             </div>
-            <div class="w-full lg:w-5/12">
-                <RouterLink :to="{ name: 'adminaddemployee'}" class="flex items-center justify-center gap-x-2 rounded-lg py-2 w-full text-center bg-blue-600 text-white">
-                    <p>Add Employee</p>
+            <div class="w-full flex items-center gap-x-5 mt-3 md:w-3/12 lg:mt-0 lg:w-1/2">
+                <button @click="downloadPdf" class="w-full bg-blue-600 text-base text-white py-2 px-2 rounded-md flex items-center justify-center gap-x-2 md:hidden"><i class="fa-solid fa-print"></i><p class="flex items-center gap-x-1.5"><span class="xs-size">Generate</span>Report</p></button>
+                <RouterLink :to="{ name: 'adminaddemployee'}" class="btnAdd px-2 flex items-center justify-center gap-x-2 rounded-lg py-2 w-full text-center bg-blue-600 text-white md:py-1.5 lg:py-2 lg:px-0 ">
                     <i class="fa-regular fa-square-plus"></i>
+                    <p class="flex items-center gap-x-1.5">Add<span class="xs-size">Employee</span></p>
                 </RouterLink>
             </div>
         </div>
@@ -84,26 +85,26 @@
     </section>
 
     <!--PAGINATION & GENERATE BUTTON-->
-    <div class="w-full flex items-center justify-end gap-x-4 py-4">
-        <button @click="downloadPdf" class="bg-blue-600 text-base text-white py-1 px-2 rounded-md">Generate Report</button>
-        <div class="flex flex-col lg:flex-row justify-between">
-            <nav class="flex justify-center items-center text-gray-600 mt-8 text-sm lg:mt-0">
+    <div class="w-full flex items-center justify-center gap-x-4 py-4 md:items-end md:justify-end">
+        <button @click="downloadPdf" class="bg-blue-600 text-base text-white py-1 px-2 rounded-md hidden md:block">Generate Report</button>
+        <div class="flex flex-col justify-between lg:flex-row lg:justify-end">
+            <nav class="flex justify-center items-center text-gray-600 mt-8 text-lg lg:text-sm lg:mt-0">
                 <button class="p-2 rounded hover:bg-blue-300 hover:text-white text-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <a href="#" class="px-2.5 py-1 rounded bg-blue-600 text-white font-medium hover:bg-blue-300 hover:text-white"> 1 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 2 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 3 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> ... </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 9 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded bg-blue-600 text-white font-medium hover:bg-blue-300 hover:text-white"> 1 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 2 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 3 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> ... </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 9 </a>
                 <button class="p-2 rounded hover:bg-blue-300 hover:text-white text-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
-            </nav>  
+            </nav>
         </div>
     </div>
 </template>
@@ -192,5 +193,51 @@ tbody:before {
 
 .searchField input::-ms-input-placeholder {
     color: #A6BFF7;
+}
+
+.dashboardBody {
+    width: calc(100% - 80px);
+}
+
+@media only screen 
+    and (min-device-width: 280px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .dashboardBody {
+        width: 100%;
+    }
+    .xs-size {
+        display: none;
+    }
+
+    .btnAdd {
+        width: 80%;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media only screen 
+    and (min-device-width: 640px) 
+    and (max-device-width: 1023px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+    .dashboardBody {
+        width: 100%;
+    }
+
+    .xs-size {
+        display: none;
+    }
+}
+
+@media only screen 
+    and (min-device-width: 712px) 
+    and (max-device-width: 1023px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+    .dashboardBody {
+        width: 100%;
+        overflow-x: auto;
+    }
 }
 </style>

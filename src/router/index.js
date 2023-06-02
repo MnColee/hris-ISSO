@@ -49,6 +49,22 @@ import EmployeeAccomplishmentReport from '../pages/employee/EmployeeAccomplishme
 import EmployeeDailyAccomplishmentReport from '../pages/employee/EmployeeDailyAccomplishmentReport.vue'
 import EmployeeSendDailyReport from '../pages/employee/EmployeeSendDailyReport.vue'
 
+import MobilePromptPassword from '../auth/MobilePromptPassword.vue'
+import MobileHomePage from '../mobile/MobileHomePage.vue'
+import MobileNotificationPage from '../mobile/MobileNotificationPage.vue'
+
+import MobileSendAccomplishmentReport from '../mobile/MobileSendAccomplishmentReport.vue'
+import MobileTaskUndertaken from '../mobile/send-report/MobileTaskUndertaken.vue'
+import MobileForCompletion from '../mobile/send-report/MobileForCompletion.vue'
+import MobileTaskNextDay from '../mobile/send-report/MobileTaskNextDay.vue'
+
+import MobileFileLeave from '../mobile/MobileFileLeave.vue'
+import MobileAttendance from '../mobile/MobileAttendance.vue'
+import MobileProfilePage from '../mobile/MobileProfilePage.vue'
+import MobileAccomplishmentReport from '../mobile/MobileAccomplishmentReport.vue'
+import MobileDailyAccomplishmentReport from '../mobile/MobileDailyAccomplishmentReport.vue'
+import MobileChangePassword from '../mobile/MobileChangePassword.vue'
+
 import _404View from '../views/_404View.vue'
 
 const router = createRouter({
@@ -103,7 +119,7 @@ const router = createRouter({
       name: 'login',
       component: LoginView,
       meta: {
-        hideNav: true,
+        hideAdminNav: true,
         hideFooter: true
       }
     },
@@ -418,6 +434,150 @@ const router = createRouter({
         hideNav: true,
         hideAdminNav: true,
         hideFooter: true,
+      }
+    },
+
+
+    //mobile prompt password
+    {
+      path: '/promptpassword',
+      name: 'promptpassword',
+      component: MobilePromptPassword,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+      }
+    },
+    {
+      path: '/mhomepage',
+      name: 'mhomepage',
+      component: MobileHomePage,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+      }
+    },
+    {
+      path: '/mnotification',
+      name: 'mnotification',
+      component: MobileNotificationPage,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/msendaccomplishmentreport',
+      name: 'msendaccomplishmentreport',
+      component: MobileSendAccomplishmentReport,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mtaskundertaken',
+      name: 'mtaskundertaken',
+      component: MobileTaskUndertaken,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mforcompletion',
+      name: 'mforcompletion',
+      component: MobileForCompletion,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mtasknextday',
+      name: 'mtasknextday',
+      component: MobileTaskNextDay,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mfileleave',
+      name: 'mfileleave',
+      component: MobileFileLeave,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mattendance',
+      name: 'mattendance',
+      component: MobileAttendance,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/profilepage',
+      name: 'profilepage',
+      component: MobileProfilePage,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/maccomplishmentreport',
+      name: 'maccomplishmentreport',
+      component: MobileAccomplishmentReport,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mdailyaccomplishmentreport',
+      name: 'mdailyaccomplishmentreport',
+      component: MobileDailyAccomplishmentReport,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
+      }
+    },
+    {
+      path: '/mchangepassword',
+      name: 'mchangepassword',
+      component: MobileChangePassword,
+      meta: {
+        hideNav: true,
+        hideAdminNav: true,
+        hideFooter: true,
+        touchswipe: true
       }
     },
     

@@ -39,12 +39,12 @@
 
             <tbody class="w-full ">
                 <RouterLink :to="{ name: 'adminattendance'}">
-                    <tr v-for="(week, index) in weeks" :key="index" class="w-full grid grid-cols-7">
-                        <td class="text-center font-medium lg:text-4xl lg:py-6 xl:py-6 xl:text-5xl" 
+                    <tr v-for="(week, index) in weeks" :key="index" class="w-full">
+                        <td class="w-40 text-center font-medium lg:text-4xl lg:py-6 xl:w-40 xl:py-6 xl:text-5xl" 
                             v-for="(day, i) in week" 
                             :key="i" 
                             :class="{ today: isToday(day), selected: isSelected(day) }" @click="selectDay(day)">
-                            <div class="w-full">{{ day }}</div>
+                            {{ day }}
                         </td>
                     </tr>
                 </RouterLink>

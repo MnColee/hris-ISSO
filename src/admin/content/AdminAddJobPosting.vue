@@ -42,9 +42,9 @@
                             </div>
                             <div>
                                 <label for="imgInput" type="button" class="bg-blue-600 text-white rounded-md py-1.5 w-full cursor-pointer text-center px-2">				
-						            Upload Job Image
-					            </label>
-					            <input name="img" id="imgInput" class="hidden cursor-pointer" type="file" accept="image/*"/>
+                                    Upload Job Image
+                                </label>
+                                <input name="img" id="imgInput" class="hidden cursor-pointer" type="file" accept="image/*"/>
                             </div>
                         </div>
                     </div>

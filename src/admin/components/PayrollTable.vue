@@ -74,26 +74,26 @@
     </section>
 
     <!--PAGINATION & GENERATE BUTTON-->
-    <div class="w-full flex items-center justify-end gap-x-4 py-4">
-        <button @click="downloadPdf" class="bg-blue-600 text-base text-white py-1 px-2 rounded-md">Generate Report</button>
-        <div class="flex flex-col lg:flex-row justify-between">
-            <nav class="flex justify-center items-center text-gray-600 mt-8 text-sm lg:mt-0">
+    <div class="w-full flex flex-col-reverse items-center justify-center gap-y-6 py-4 sm:flex-row sm:items-end sm:justify-end sm:gap-y-0 sm:gap-x-4">
+        <button @click="downloadPdf" class="bg-blue-600 text-base text-white py-2 px-4 rounded-md sm:px-2 sm:py-1">Generate Report</button>
+        <div class="flex flex-col justify-between lg:flex-row lg:justify-end">
+            <nav class="flex justify-center items-center text-gray-600 mt-8 text-lg lg:text-sm lg:mt-0">
                 <button class="p-2 rounded hover:bg-blue-300 hover:text-white text-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <a href="#" class="px-2.5 py-1 rounded bg-blue-600 text-white font-medium hover:bg-blue-300 hover:text-white"> 1 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 2 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 3 </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> ... </a>
-                <a href="#" class="px-2.5 py-1 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 9 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded bg-blue-600 text-white font-medium hover:bg-blue-300 hover:text-white"> 1 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 2 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 3 </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> ... </a>
+                <a href="#" class="px-4 py-1 lg:px-2.5 rounded hover:bg-blue-300 hover:text-white text-blue-600"> 9 </a>
                 <button class="p-2 rounded hover:bg-blue-300 hover:text-white text-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
-            </nav>  
+            </nav>
         </div>
     </div>
 </template>
